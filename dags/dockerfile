@@ -1,0 +1,12 @@
+# Use the official Airflow image
+FROM apache/airflow:2.9.1
+
+# Install any additional Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the DAGs folder to the container
+COPY dags/ /opt/airflow/dags/
+
+# Set the entrypoint to use the Airflow command line interface
+ENTRYPOINT ["airflow"]
