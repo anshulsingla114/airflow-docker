@@ -77,7 +77,7 @@ def load_to_csv(ti):
             raise FileNotFoundError(f"Directory {output_dir} does not exist after attempt to create it")
 
         # Save the transformed data to a CSV file
-        output_path = os.path.join(output_dir, 'youtube_comments4.csv')
+        output_path = os.path.join(output_dir, 'youtube_comments5.csv')
         logging.info(f"Attempting to save CSV file at: {output_path}")
         transformed_df.to_csv(output_path, index=False)
         logging.info(f"CSV file saved successfully at: {output_path}")
