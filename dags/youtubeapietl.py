@@ -18,7 +18,7 @@ def extract_data():
         # Make API request to retrieve comments from a specific video
         request = youtube.commentThreads().list(
             part='snippet',
-            videoId='lpj8YgrlkTk',
+            videoId='i_23KUAEtUM',
             maxResults=100
         )
         response = request.execute()
@@ -77,7 +77,7 @@ def load_to_csv(ti):
             raise FileNotFoundError(f"Directory {output_dir} does not exist after attempt to create it")
 
         # Save the transformed data to a CSV file
-        output_path = os.path.join(output_dir, 'youtube_comments3.csv')
+        output_path = os.path.join(output_dir, 'youtube_comments4.csv')
         logging.info(f"Attempting to save CSV file at: {output_path}")
         transformed_df.to_csv(output_path, index=False)
         logging.info(f"CSV file saved successfully at: {output_path}")
