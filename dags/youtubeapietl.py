@@ -7,13 +7,13 @@ import logging
 import os
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+#logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # Placeholder function for data extraction
 def extract_data():
     try:
         # Initialize YouTube Data API client
-        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey='AIzaSyAcBIKEVB4ZN3u09_eSL21qb9QlwdYVAaY')
+        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey='YOUR_API_KEY')
 
         # Make API request to retrieve comments from a specific video
         request = youtube.commentThreads().list(
@@ -77,7 +77,7 @@ def load_to_csv(ti):
             raise FileNotFoundError(f"Directory {output_dir} does not exist after attempt to create it")
 
         # Save the transformed data to a CSV file
-        output_path = os.path.join(output_dir, 'youtube_comments5.csv')
+        output_path = os.path.join(output_dir, 'youtube_comments.csv')
         logging.info(f"Attempting to save CSV file at: {output_path}")
         transformed_df.to_csv(output_path, index=False)
         logging.info(f"CSV file saved successfully at: {output_path}")
