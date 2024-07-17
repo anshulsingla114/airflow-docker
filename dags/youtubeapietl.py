@@ -13,7 +13,7 @@ import os
 def extract_data():
     try:
         # Initialize YouTube Data API client
-        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey='YOUR_API_KEY')
+        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey='AIzaSyAcBIKEVB4ZN3u09_eSL21qb9QlwdYVAaY')
 
         # Make API request to retrieve comments from a specific video
         request = youtube.commentThreads().list(

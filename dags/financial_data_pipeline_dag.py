@@ -19,8 +19,8 @@ default_args = {
 # Extract function to fetch stock prices and financial news
 def extract():
     print("Starting the extract function")
-    alpha_vantage_api_key = 'YOUR_ALPHA_VANTAGE_API_KEY'
-    news_api_key = 'YOUR_NEWS_API_KEY'
+    alpha_vantage_api_key = 'GU1KRZ5X4D6ZHU1V'
+    news_api_key = 'f2e34360b7c6415bae51eef1f3618fde'
     
     # Fetch stock prices for Reliance Industries Limited (RELIANCE.BSE) from Alpha Vantage
     stock_symbol = 'RELIANCE.BSE'
